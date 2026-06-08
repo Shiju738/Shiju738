@@ -2,12 +2,7 @@
 ================================================================
   GitHub Profile README — Shiju Reji (@Shiju738)
   Flutter Developer @ Notespedia | Kerala, India
-----------------------------------------------------------------
-  BEFORE YOU PUSH — replace the 3 placeholders marked << REPLACE >>:
-    1. LinkedIn URL
-    2. Email address
-    3. Portfolio URL (or delete that one badge)
-  Everything else is wired to real repos and renders on GitHub.
+  All links are live: LinkedIn, Email (shijureji5@gmail.com), GitHub.
 ================================================================
 -->
 
@@ -152,17 +147,14 @@ I'm **Shiju Reji**, a Flutter Developer with **2+ years** of experience shipping
 ## 🤝 Connect With Me
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/your-linkedin/"><!-- << REPLACE >> -->
+  <a href="https://www.linkedin.com/in/shiju-reji-196763245/">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="linkedin" />
   </a>
-  <a href="mailto:your.email@example.com"><!-- << REPLACE >> -->
+  <a href="mailto:shijureji5@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="email" />
   </a>
   <a href="https://github.com/Shiju738">
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="github" />
-  </a>
-  <a href="https://your-portfolio.com"><!-- << REPLACE >> or delete -->
-    <img src="https://img.shields.io/badge/Portfolio-29B6F6?style=for-the-badge&logo=googlechrome&logoColor=white" alt="portfolio" />
   </a>
 </p>
 
