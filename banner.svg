@@ -195,7 +195,7 @@
 
       <!-- Role -->
       <text x="2" y="36" font-size="22" font-weight="600" fill="#e2e8f0" letter-spacing="1">
-        Flutter Developer
+        Flutter Developer <tspan fill="#94a3b8" font-size="18" font-weight="500">@ Notespedia</tspan>
         <animate attributeName="opacity" values="0;1" dur="0.8s" begin="0.4s" fill="freeze"/>
       </text>
 
@@ -207,7 +207,7 @@
       <!-- Subtitle / tech line -->
       <text x="2" y="84" font-size="15" font-weight="500" fill="#94a3b8" letter-spacing="0.5"
             font-family="'Fira Code',monospace">
-        Android &#8226; iOS &#8226; Firebase &#8226; Clean Architecture
+        Android &#8226; iOS &#8226; Riverpod / BLoC &#8226; Firebase &#8226; Clean Architecture
         <animate attributeName="opacity" values="0;1" dur="0.8s" begin="0.8s" fill="freeze"/>
       </text>
     </g>
