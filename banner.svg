@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Premium Animated Banner — Shiju Reji | Flutter Developer
+  Dark futuristic • Blue/Purple gradient • Particles • Glassmorphism • Animated code
+  Usage in README:  <img src="banner.svg" alt="Shiju Reji - Flutter Developer" />
+  (Pure SMIL/CSS animation — renders directly on GitHub raw SVG.)
+-->
+<svg width="1000" height="320" viewBox="0 0 1000 320" fill="none"
+     xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+     role="img" aria-label="Shiju Reji, Flutter Developer">
+
+  <!-- ============================ DEFS ============================ -->
+  <defs>
+    <!-- Deep futuristic background gradient -->
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"  stop-color="#0a0a1f"/>
+      <stop offset="45%" stop-color="#0d1030"/>
+      <stop offset="100%" stop-color="#140a2e"/>
+    </linearGradient>
+
+    <!-- Animated blue→purple accent gradient (shifts hue position) -->
+    <linearGradient id="accentGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee">
+        <animate attributeName="stop-color"
+                 values="#22d3ee;#3b82f6;#8b5cf6;#22d3ee" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="50%" stop-color="#3b82f6">
+        <animate attributeName="stop-color"
+                 values="#3b82f6;#8b5cf6;#d946ef;#3b82f6" dur="8s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" stop-color="#8b5cf6">
+        <animate attributeName="stop-color"
+                 values="#8b5cf6;#d946ef;#22d3ee;#8b5cf6" dur="8s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+
+    <!-- Glassmorphism panel gradient -->
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.02"/>
+    </linearGradient>
+
+    <!-- Radial glow blobs -->
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glowPurple" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Soft blur for glow -->
+    <filter id="softBlur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+    <!-- Neon text glow -->
+    <filter id="neon" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Grid pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#3b82f6" stroke-opacity="0.07" stroke-width="1"/>
+    </pattern>
+
+    <!-- Clip to rounded banner -->
+    <clipPath id="round">
+      <rect x="0" y="0" width="1000" height="320" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <!-- ============================ SCENE ============================ -->
+  <g clip-path="url(#round)">
+
+    <!-- Base background -->
+    <rect width="1000" height="320" fill="url(#bgGrad)"/>
+    <rect width="1000" height="320" fill="url(#grid)"/>
+
+    <!-- Drifting glow blobs -->
+    <g filter="url(#softBlur)">
+      <circle cx="180" cy="90" r="120" fill="url(#glowBlue)">
+        <animate attributeName="cx" values="180;260;180" dur="12s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="90;140;90"  dur="12s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="820" cy="230" r="140" fill="url(#glowPurple)">
+        <animate attributeName="cx" values="820;740;820" dur="14s" repeatCount="indefinite"/>
+        <animate attributeName="cy" values="230;180;230" dur="14s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- ============ FLOATING PARTICLES ============ -->
+    <g fill="#ffffff">
+      <circle cx="120" cy="260" r="2" opacity="0.7">
+        <animate attributeName="cy" values="260;40;260" dur="9s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.8;0" dur="9s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="300" cy="300" r="1.6" fill="#22d3ee" opacity="0.8">
+        <animate attributeName="cy" values="300;60;300" dur="11s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="11s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="470" cy="280" r="2.4" fill="#8b5cf6" opacity="0.7">
+        <animate attributeName="cy" values="280;30;280" dur="13s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.85;0" dur="13s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="640" cy="300" r="1.8" opacity="0.7">
+        <animate attributeName="cy" values="300;80;300" dur="10s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.8;0" dur="10s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="780" cy="290" r="2.2" fill="#3b82f6" opacity="0.8">
+        <animate attributeName="cy" values="290;50;290" dur="12s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.9;0" dur="12s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="900" cy="270" r="1.6" fill="#d946ef" opacity="0.7">
+        <animate attributeName="cy" values="270;70;270" dur="8.5s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.85;0" dur="8.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="220" cy="300" r="1.5" fill="#22d3ee" opacity="0.6">
+        <animate attributeName="cy" values="300;120;300" dur="14s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.7;0" dur="14s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="560" cy="290" r="1.4" opacity="0.6">
+        <animate attributeName="cy" values="290;100;290" dur="15s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0;0.7;0" dur="15s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- ============ ANIMATED CODE ELEMENT (glass terminal, right side) ============ -->
+    <g transform="translate(620,72)">
+      <!-- Glass panel -->
+      <rect width="320" height="176" rx="16" fill="url(#glassGrad)"
+            stroke="#ffffff" stroke-opacity="0.14" stroke-width="1"/>
+      <rect width="320" height="176" rx="16" fill="none"
+            stroke="url(#accentGrad)" stroke-opacity="0.4" stroke-width="1"/>
+      <!-- Title bar dots -->
+      <circle cx="22" cy="22" r="5" fill="#ff5f56"/>
+      <circle cx="40" cy="22" r="5" fill="#ffbd2e"/>
+      <circle cx="58" cy="22" r="5" fill="#27c93f"/>
+      <text x="300" y="26" text-anchor="end" font-family="'Fira Code',monospace"
+            font-size="11" fill="#9ca3af">main.dart</text>
+
+      <!-- Code lines (monospace, typed feel) -->
+      <g font-family="'Fira Code','Courier New',monospace" font-size="13">
+        <text x="22" y="58" fill="#c792ea">void <tspan fill="#82aaff">main</tspan><tspan fill="#89ddff">() {</tspan></text>
+        <text x="36" y="80" fill="#82aaff">runApp<tspan fill="#89ddff">(</tspan><tspan fill="#c792ea">const</tspan> <tspan fill="#ffcb6b">MyApp</tspan><tspan fill="#89ddff">());</tspan>
+          <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.6s" fill="freeze"/>
+        </text>
+        <text x="22" y="102" fill="#89ddff">}</text>
+        <text x="22" y="130" fill="#c792ea">Widget <tspan fill="#82aaff">build</tspan><tspan fill="#89ddff">() =&gt;</tspan>
+          <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.1s" fill="freeze"/>
+        </text>
+        <text x="36" y="152" fill="#ffcb6b">Scaffold<tspan fill="#89ddff">(...)</tspan><tspan fill="#546e7a">; // 🚀</tspan>
+          <animate attributeName="opacity" values="0;1" dur="0.4s" begin="1.6s" fill="freeze"/>
+        </text>
+      </g>
+      <!-- Blinking cursor -->
+      <rect x="170" y="142" width="8" height="14" fill="#22d3ee">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
+      <!-- Gentle float -->
+      <animateTransform attributeName="transform" type="translate"
+                        values="620,72; 620,64; 620,72" dur="6s" repeatCount="indefinite" additive="sum"/>
+    </g>
+
+    <!-- ============ FLUTTER LOGO MARK (animated) ============ -->
+    <g transform="translate(70,118)">
+      <g>
+        <path d="M48 0 L24 24 L0 48 L24 48 L72 0 Z" fill="#42a5f5"/>
+        <path d="M48 48 L24 72 L48 96 L72 96 L48 72 Z" fill="#42a5f5"/>
+        <path d="M24 72 L48 48 L72 48 L48 72 Z" fill="#0d47a1"/>
+        <path d="M24 48 L48 72 L60 60 L36 36 Z" fill="#42a5f5" opacity="0.85"/>
+        <animateTransform attributeName="transform" type="rotate"
+                          values="0 36 48; 4 36 48; 0 36 48; -4 36 48; 0 36 48"
+                          dur="7s" repeatCount="indefinite"/>
+      </g>
+      <!-- Pulsing ring -->
+      <circle cx="36" cy="48" r="70" fill="none" stroke="url(#accentGrad)"
+              stroke-width="1.5" opacity="0.4">
+        <animate attributeName="r" values="70;80;70" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values="0.4;0.1;0.4" dur="4s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- ============ TEXT BLOCK ============ -->
+    <g transform="translate(210,108)" font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif">
+      <!-- Name -->
+      <text x="0" y="0" font-size="48" font-weight="800" fill="url(#accentGrad)" filter="url(#neon)">
+        Shiju Reji
+        <animate attributeName="opacity" values="0;1" dur="0.8s" begin="0.1s" fill="freeze"/>
+      </text>
+
+      <!-- Role -->
+      <text x="2" y="36" font-size="22" font-weight="600" fill="#e2e8f0" letter-spacing="1">
+        Flutter Developer
+        <animate attributeName="opacity" values="0;1" dur="0.8s" begin="0.4s" fill="freeze"/>
+      </text>
+
+      <!-- Animated underline -->
+      <rect x="2" y="48" height="3" rx="1.5" fill="url(#accentGrad)">
+        <animate attributeName="width" values="0;220;0" dur="5s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- Subtitle / tech line -->
+      <text x="2" y="84" font-size="15" font-weight="500" fill="#94a3b8" letter-spacing="0.5"
+            font-family="'Fira Code',monospace">
+        Android &#8226; iOS &#8226; Firebase &#8226; Clean Architecture
+        <animate attributeName="opacity" values="0;1" dur="0.8s" begin="0.8s" fill="freeze"/>
+      </text>
+    </g>
+
+    <!-- Animated top accent line sweeping across -->
+    <rect x="0" y="0" width="1000" height="3" fill="url(#accentGrad)" opacity="0.8"/>
+    <rect y="0" width="140" height="3" fill="#ffffff" opacity="0.9">
+      <animate attributeName="x" values="-140;1000" dur="6s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Border highlight -->
+    <rect x="0.5" y="0.5" width="999" height="319" rx="24" fill="none"
+          stroke="url(#accentGrad)" stroke-opacity="0.5" stroke-width="1.5"/>
+  </g>
+</svg>
